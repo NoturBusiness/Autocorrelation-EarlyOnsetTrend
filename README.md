@@ -1,8 +1,6 @@
 # Autocorrelation Early Onset Trend (AEOT) Indicator
 
-<iframe src="https://www.tradingview.com/script/ieVGZXw5-APA-Adaptive-Ehlers-Early-Onset-Trend-Loxx/" width="100%" height="500" frameborder="0"></iframe>
-The Early Onset Trend (AEOT) indicator is a technical analysis tool used to detect the onset of trends in financial time series data. It combines several signal processing techniques, including autocorrelation, high-pass filtering, and adaptive gain control (AGC), to identify the dominant cycle period and extract the underlying trend from the input data.
-
+[APA-Adaptive, Ehlers Early Onset Trend [Loxx] — Indicator by loxx — TradingView](https://www.tradingview.com/script/ieVGZXw5-APA-Adaptive-Ehlers-Early-Onset-Trend-Loxx/)
 ## Features
 
 - Detects the onset of new trends in financial data.
