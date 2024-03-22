@@ -44,3 +44,19 @@ The implementation includes several helper functions:
 - `quotient`: Calculates the final AEOT indicator values using the AGC output and a smoothing factor.
 
 The main `AEOT` function orchestrates the execution of these helper functions and returns the AEOT indicator values and dominant cycle periods.
+
+##Information
+
+What is Ehlers Early Onset Trend?
+The Onset Trend Detector study is a trend analyzing technical indicator developed by John F. Ehlers, based on a non-linear quotient transform. Two of Mr. Ehlers' previous studies, the Super Smoother Filter and the Roofing Filter, were used and expanded to create this new complex technical indicator. Being a trend-following analysis technique, its main purpose is to address the problem of lag that is common among moving average type indicators.
+
+The Onset Trend Detector first applies the EhlersRoofingFilter to the input data in order to eliminate cyclic components with periods longer than, for example, 100 bars (default value, customizable via input parameters) as those are considered spectral dilation. Filtered data is then subjected to re-filtering by the Super Smoother Filter so that the noise (cyclic components with low length) is reduced to minimum. The period of 10 bars is a default maximum value for a wave cycle to be considered noise; it can be customized via input parameters as well. Once the data is cleared of both noise and spectral dilation, the filter processes it with the automatic gain control algorithm which is widely used in digital signal processing. This algorithm registers the most recent peak value and normalizes it; the normalized value slowly decays until the next peak swing. The ratio of previously filtered value to the corresponding peak value is then quotiently transformed to provide the resulting oscillator. The quotient transform is controlled by the K coefficient: its allowed values are in the range from -1 to +1. K values close to 1 leave the ratio almost untouched, those close to -1 will translate it to around the additive inverse, and those close to zero will collapse small values of the ratio while keeping the higher values high.
+
+Indicator values around 1 signify uptrend and those around -1, downtrend.
+
+What is an adaptive cycle, and what is Ehlers Autocorrelation Periodogram Algorithm?
+From his Ehlers' book Cycle Analytics for Traders Advanced Technical Trading Concepts by John F. Ehlers, 2013, page 135:
+
+"Adaptive filters can have several different meanings. For example, Perry Kaufman's adaptive moving average (KAMA) and Tushar Chande's variable index dynamic average (VIDYA) adapt to changes in volatility. By definition, these filters are reactive to price changes, and therefore they close the barn door after the horse is gone. The adaptive filters discussed in this chapter are the familiar Stochastic, relative strength index (RSI), commodity channel index (CCI), and band-pass filter. The key parameter in each case is the look-back period used to calculate the indicator. This look-back period is commonly a fixed value. However, since the measured cycle period is changing, it makes sense to adapt these indicators to the measured cycle period. When tradable market cycles are observed, they tend to persist for a short while. Therefore, by tuning the indicators to the measure cycle period they are optimized for current conditions and can even have predictive characteristics.
+
+The dominant cycle period is measured using the Autocorrelation Periodogram Algorithm. That dominant cycle dynamically sets the look-back period for the indicators. I employ my own streamlined computation for the indicators that provide smoother and easier to interpret outputs than traditional methods. Further, the indicator codes have been modified to remove the effects of spectral dilation. This basically creates a whole new set of indicators for your trading arsenal.
