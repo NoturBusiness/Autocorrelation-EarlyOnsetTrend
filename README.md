@@ -1,6 +1,6 @@
 # Autocorrelation Early Onset Trend (AEOT) Indicator
 
-![Showcase Image]([https://github.com/valazeinali/Valatility-Crypto-Gang/blob/main/assets/Valatility.png](https://github.com/NoturBusiness/Autocorrelation-EarlyOnsetTrend/blob/main/showcase.png))
+![Showcase Image](https://github.com/NoturBusiness/Autocorrelation-EarlyOnsetTrend/blob/main/showcase.png)
 
 [APA-Adaptive, Ehlers Early Onset Trend [Loxx] — Indicator by loxx — TradingView](https://www.tradingview.com/script/ieVGZXw5-APA-Adaptive-Ehlers-Early-Onset-Trend-Loxx/)
 ## Features
