@@ -1,5 +1,5 @@
 @njit(nogil=True, cache=True, fastmath=True, parallel=False)
-def AEOT(input_data, auto_avg, auto_min, auto_max, K):
+def AEOT(input_data, auto_avg=3, auto_min=8, auto_max=48, K=0):
     """
     Compute the Autocorrelation Early Onset Trend (AEOT) with autocorrelation Periodogram Algorithm dominant cycle period input.
     """
