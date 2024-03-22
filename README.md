@@ -45,7 +45,7 @@ The implementation includes several helper functions:
 
 The main `AEOT` function orchestrates the execution of these helper functions and returns the AEOT indicator values and dominant cycle periods.
 
-##Information
+## Information
 
 What is Ehlers Early Onset Trend?
 The Onset Trend Detector study is a trend analyzing technical indicator developed by John F. Ehlers, based on a non-linear quotient transform. Two of Mr. Ehlers' previous studies, the Super Smoother Filter and the Roofing Filter, were used and expanded to create this new complex technical indicator. Being a trend-following analysis technique, its main purpose is to address the problem of lag that is common among moving average type indicators.
